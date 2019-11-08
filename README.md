@@ -52,7 +52,22 @@ if(pm.response.code === 200) {
 ```
 
 In POSTMAN > Settings Icon[Manage Enviroment] > Click Add & Add the following :-
+
+### [1.1] When Testing on Local Enviroment
+*(NOTE), DO NOT ASSIGN VALUE TO AUTH TOKEN, It will be assigned by our test Script.
 ![2](https://user-images.githubusercontent.com/20107730/68329196-c24cf680-00f6-11ea-9b9c-469af1926783.PNG)
+
+*(NOTE), DO NOT ASSIGN VALUE TO AUTH TOKEN, It will be assigned by our test Script.
+### [1.2] When Testing On Production Enviroment
+![as](https://user-images.githubusercontent.com/20107730/68481215-9cd9fd00-025c-11ea-8676-bdc633e4bebb.PNG)
+
+### [2] Project > Setting > Edit
+![111111](https://user-images.githubusercontent.com/20107730/68481401-1b369f00-025d-11ea-9682-d22259b79085.PNG)
+
+### [3] Choose Type > Bearer Token > Set Token Value > {{authToken}}
+![22222222](https://user-images.githubusercontent.com/20107730/68481499-60f36780-025d-11ea-9697-3aeef4e89c37.PNG)
+*(Note) authToken is the variable which we set up in [1] Step
+
 
 ## Creating User
 ![3](https://user-images.githubusercontent.com/20107730/68329405-2b346e80-00f7-11ea-9203-98f825856c02.PNG)
@@ -107,6 +122,14 @@ As Soon as you SignUp you will get an email regarding signup.
 http://localhost:3000/users/PasteIDoFUserHere/avatars
 ![22](https://user-images.githubusercontent.com/20107730/68333217-21623980-00fe-11ea-9899-30fada7b046d.PNG)
 
+# Working with MongoDB , In Production
+https://medium.com/@rehaancool796/how-to-setup-mongodb-production-database-12-steps-b54159dc17e6
+You can Read this article on medium, which I wrote for people who want to try this project :)
+When Uploading This project to heroku I have set enviroment variables with the help of the following command below -
+```bash
+[heroku config:set key=value key1=value key2=value]
+heroku config:set SENDGRID_API_KEY=value  JWT_SECRET=YourSecretKeyHere   MONGODB_URL="The url you got from the atlas website(read medium article for more)"
+```
 
 
 
